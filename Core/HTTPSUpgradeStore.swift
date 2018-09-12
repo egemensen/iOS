@@ -100,7 +100,8 @@ public class HTTPSUpgradePersistence: HTTPSUpgradeStore {
             let entityName = String(describing: HTTPSStoredBloomFilterSpecification.self)
             let context = container.managedObjectContext
             
-            if let storedEntity = NSEntityDescription.insertNewObject(forEntityName: entityName, into: context) as? HTTPSStoredBloomFilterSpecification {
+            if let storedEntity = NSEntityDescription.insertNewObject(forEntityName: entityName, into: context)
+                    as? HTTPSStoredBloomFilterSpecification {
                 storedEntity.totalEntries = Int64(specification.totalEntries)
                 storedEntity.errorRate = specification.errorRate
                 storedEntity.sha256 = specification.sha256

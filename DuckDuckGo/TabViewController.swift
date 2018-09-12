@@ -23,6 +23,8 @@ import Core
 import Device
 import StoreKit
 
+// swiftlint:disable file_length
+// swiftlint:disable type_body_length
 class TabViewController: WebViewController {
 
     @IBOutlet var showBarsTapGestureRecogniser: UITapGestureRecognizer!
@@ -401,6 +403,7 @@ class TabViewController: WebViewController {
         tearDown()
     }
 }
+// swiftlint:enable type_body_length
 
 private struct MessageHandlerNames {
     static let trackerDetected = "trackerDetectedMessage"
@@ -627,3 +630,4 @@ extension TabViewController: PrivacyProtectionDelegate {
     }
 
 }
+// swiftlint:enable file_length

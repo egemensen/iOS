@@ -20,6 +20,7 @@
 import UIKit
 import WebKit
 
+// swiftlint:disable file_length
 open class WebViewController: UIViewController {
 
     private struct WebViewKeyPaths {
@@ -173,6 +174,7 @@ open class WebViewController: UIViewController {
         webView.load(urlRequest)
     }
 
+    // swiftlint:disable block_based_kvo
     open override func observeValue(forKeyPath keyPath: String?,
                                     of object: Any?,
                                     change: [NSKeyValueChangeKey: Any]?,
@@ -201,6 +203,7 @@ open class WebViewController: UIViewController {
             Logger.log(text: "Unhandled keyPath \(keyPath)")
         }
     }
+    // swiftlint:enable block_based_kvo
 
     private func urlDidChange() {
         DispatchQueue.main.async {
@@ -471,3 +474,4 @@ fileprivate extension WKNavigationAction {
     }
 
 }
+// swiftlint:enable file_length

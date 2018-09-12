@@ -42,10 +42,12 @@ public struct TermsOfService: Decodable {
         case score
         case match
 
+        // swiftlint:disable nesting
         enum Match: String, CodingKey {
             case good
             case bad
         }
+        // swiftlint:enable nesting
     }
 
     struct Lookups {

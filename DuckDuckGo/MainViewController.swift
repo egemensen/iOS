@@ -22,6 +22,8 @@ import WebKit
 import Core
 import Lottie
 
+// swiftlint:disable file_length
+// swiftlint:disable type_body_length
 class MainViewController: UIViewController {
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -471,6 +473,7 @@ extension MainViewController: BrowserChromeDelegate {
     }
 
 }
+// swiftlint:enable type_body_length
 
 extension MainViewController: OmniBarDelegate {
 
@@ -628,3 +631,4 @@ extension MainViewController: TabSwitcherButtonDelegate {
     }
     
 }
+// swiftlint:enable file_length
